@@ -1,0 +1,44 @@
+/* header */
+.eb_heig{
+    height: 100vh;
+    width: 100vw;
+}
+
+nav{
+    height: 60px;
+    width: 100%;
+    background-color: #2D3A45;
+}
+
+.square{
+    width: 40px;
+    height: 40px;
+}
+
+.square img{
+    width: 100%;
+}
+
+/* main */
+
+main{
+    height: calc(100vh - 60px);
+    background-color: #1E2D3B;
+    padding-top: 40px;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.card{
+    width: calc(100% / 3 - 100px);
+    max-width: 16rem;
+    margin: 5px 50px;
+    padding: 25px;
+    background-color: #2D3A45!important;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.card img{
+    outline: none;
+}
