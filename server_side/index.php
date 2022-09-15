@@ -30,19 +30,19 @@ ci saranno tutti i dischi. -->
         <main class="container-fluid px-0 m-auto d-flex flex-wrap justify-content-center">
             <?php
                 include __DIR__ . "/../database.php";//includo il mio Array presente in un altro file
-               foreach($database as $disc){//applico un ciclo
-                   
-                    // che stamperà la mia card dei dischi in modo dinamico
-                    echo '
-                    <div class="card">' .
-                        '<img src="'. $disc['poster'] . '" class="card-img-top"/>' . 
-                        
-                        '<div class="card-body d-flex flex-column justify-content-center">' . 
-                            '<h5 class="text-light card-title">' . $disc["title"] . '</h5>' .
-                            '<span class="text-secondary card-text">' . $disc["author"] . '</span>' .
-                            '<span class="text-secondary card-text">' . $disc["year"] . '</span>' .
-                        '</div>' .
-                    '</div>';
+                foreach($database as $disc){//applico un ciclo
+            ?>  
+                     <!-- che stamperà la mia card dei dischi in modo dinamico -->
+                    <div class="card">
+                        <img src="<?php echo $disc['poster']?>" class="card-img-top"/> 
+                        <div class="card-body d-flex flex-column justify-content-center"> 
+                            <h5 class="text-light card-title"> <?php echo $disc["title"];?> </h5>
+                            <span class="text-secondary card-text"> <?php echo $disc["author"];?> </span>
+                            <span class="text-secondary card-text"> <?php echo $disc["year"];?> </span>
+                        </div>
+                    </div>
+            
+            <?php
                 }
             ?>
             
